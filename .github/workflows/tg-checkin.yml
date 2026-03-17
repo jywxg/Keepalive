@@ -12,7 +12,7 @@ on:
           - All
           #- CloudCat
           - SheerID
-          - ICMP9
+          #- ICMP9
   schedule:
     - cron: '10 0 * * *'
 
@@ -61,6 +61,6 @@ jobs:
       if: env.RUN_TARGET == 'All'
       run: sleep 30
 
-    - name: 🚀 执行 ICMP9 自动签到
-      if: env.RUN_TARGET == 'All' || env.RUN_TARGET == 'ICMP9'
-      run: python -u tg-checkin/icmp9.py
+    #- name: 🚀 执行 ICMP9 自动签到
+    #  if: env.RUN_TARGET == 'All' || env.RUN_TARGET == 'ICMP9'
+    #  run: python -u tg-checkin/icmp9.py
